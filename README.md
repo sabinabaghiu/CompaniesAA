@@ -16,7 +16,7 @@ Navigate to the client, install the packaes and start the application
 ```
 $ cd client/
 $ npm install
-$npm start
+$ npm start
 ```
 Client should start on port 3000
 
