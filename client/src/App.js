@@ -1,31 +1,16 @@
-import { useState, useEffect } from "react"
-import { BrowserRouter, Switch, Route} from 'react-router-dom'
-import Header from "./components/Header"
-import Companies from "./components/Companies"
-import AddCompany from "./components/AddCompany";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import CreateCompany from "./pages/CreateCompany";
+import EditCompany from "./pages/EditCompany";
 
 const App = () => {
-  const [companies, setCompanies] = useState([
-   
-  ])
-
-  useEffect(( ) => {
-    fetch("http://localhost:5000/companies").then(response => response.json())
-    .then(data => setCompanies(data));
-  }, [])
-
-  
-
-  //Edit company
-  const editCompany = (id) => {
-    console.log('edit')
-  }
-
   return (
-    <div className="container">
-      <Header></Header>
-      <Companies companies={companies} onEdit={editCompany}></Companies>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/create-company" element={<CreateCompany />} />
+      <Route path="/edit-company/:companyId" element={<EditCompany />} />
+    </Routes>
   );
 };
 

@@ -8,5 +8,5 @@ export interface Company {
 
 export interface Owner {
   name: string;
-  socialNumber: string;
+  securityNumber: string;
 }
