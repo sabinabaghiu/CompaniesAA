@@ -129,6 +129,7 @@ curl -X PUT http://localhost:5000/companies/620cd6c251673fd47b69c70a
 -d '{
         "email": "dopopoco1@gmail.com",
       }
+```
 
 ## Build With
 
